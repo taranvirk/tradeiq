@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #070b14;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 78% -10%, rgba(34, 211, 238, 0.07), transparent 28rem),
+    #070b14;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@layer components {
+  .panel-card {
+    @apply rounded-xl border border-line bg-panel/90 shadow-glow;
+  }
+
+  .section-eyebrow {
+    @apply text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600;
+  }
+
+  .demo-badge {
+    @apply rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-cyan-300;
+  }
+
+  .signal-buy {
+    @apply inline-flex rounded-md border border-positive/20 bg-positive/10 px-2 py-1 text-[10px] font-bold tracking-wider text-positive;
+  }
+
+  .signal-hold {
+    @apply inline-flex rounded-md border border-amber-300/20 bg-amber-300/10 px-2 py-1 text-[10px] font-bold tracking-wider text-amber-300;
+  }
+
+  .signal-sell {
+    @apply inline-flex rounded-md border border-negative/20 bg-negative/10 px-2 py-1 text-[10px] font-bold tracking-wider text-negative;
+  }
+
+  .page-shell {
+    @apply mx-auto w-full max-w-[1600px] px-4 py-7 sm:px-6 lg:px-8 lg:py-9;
+  }
+
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight text-white sm:text-3xl;
+  }
+
+  .control {
+    @apply rounded-lg border border-line bg-[#090f1b] px-3 py-2.5 text-sm text-slate-300 outline-none transition focus:border-accent/50;
+  }
+
+  .primary-button {
+    @apply rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #26354a;
+}

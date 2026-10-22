@@ -1,0 +1,1 @@
+"""TradeIQ backend application package."""
